@@ -40,6 +40,12 @@ module.exports = {
     hash: true,
     template: './src/index.html',  // Load a custom template
   }),
+    new HtmlWebpackPlugin({
+    title: 'Contact Page',
+    hash: true,
+    filename: 'contact.html',
+    template: './src/contact.html',
+    }),
     new ExtractTextPlugin({
       filename: 'app.css',
       disabled: false,
