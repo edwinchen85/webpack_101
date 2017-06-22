@@ -3,10 +3,13 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 
 module.exports = {
-  entry: './src/app.js',
+  entry: {
+    app: './src/app.js',
+    contact: './src/contact.js'
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: 'app.bundle.js'
+    filename: '[name].bundle.js'  // Dynamic name
   },
   module: {
     rules: [
@@ -38,11 +41,13 @@ module.exports = {
       collapseWhitespace: true,
     },
     hash: true,
+    excludeChunks: ['contact'],   // exclude contact.js in index.html
     template: './src/index.html',  // Load a custom template
   }),
     new HtmlWebpackPlugin({
     title: 'Contact Page',
     hash: true,
+    chunks: ['contact'],  // only include contact.js in contact page
     filename: 'contact.html',
     template: './src/contact.html',
     }),
