@@ -4,7 +4,7 @@
   "description": "Webpack project starter",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack -d --watch",
+    "dev": "webpack-dev-server",
     "prod": "webpack -p"
   },
   "author": "Edwin Chen",
