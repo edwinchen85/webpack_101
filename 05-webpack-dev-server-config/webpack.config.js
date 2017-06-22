@@ -20,6 +20,12 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    stats: "errors-only",   // Replace verbose message with errors-only display
+    open: true,     // open browser on first run
+  },
   plugins: [
     new HtmlWebpackPlugin({
     title: 'Project Demo',
