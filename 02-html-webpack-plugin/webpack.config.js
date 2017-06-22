@@ -7,7 +7,7 @@ module.exports = {
     filename: 'app.bundle.js'
   },
   plugins: [new HtmlWebpackPlugin({
-    title: 'Project',
+    title: 'Project Demo',
     template: './src/index.ejs',  // Load a custom template
   })]
 }
