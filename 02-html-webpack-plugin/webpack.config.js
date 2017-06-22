@@ -8,6 +8,6 @@ module.exports = {
   },
   plugins: [new HtmlWebpackPlugin({
     title: 'Project Demo',
-    template: './src/index.ejs',  // Load a custom template
+    template: './src/index.html',  // Load a custom template
   })]
 }
