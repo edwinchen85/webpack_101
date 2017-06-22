@@ -6,6 +6,11 @@ module.exports = {
     path: 'dist',
     filename: 'app.bundle.js'
   },
+  module: {
+    rules: [
+      {test: /\.css$/, use: 'css-loader'}
+    ]
+  }
   plugins: [new HtmlWebpackPlugin({
     title: 'Project Demo',
     minify: {
