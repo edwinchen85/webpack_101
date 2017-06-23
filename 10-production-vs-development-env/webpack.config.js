@@ -24,11 +24,7 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          loader: ['css-loader', 'sass-loader'],
-          publicPath: '/dist'
-        })
+        use: cssConfig
       },
       {
         test: /\.js$/,
