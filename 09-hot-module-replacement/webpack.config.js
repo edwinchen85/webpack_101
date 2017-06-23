@@ -50,6 +50,8 @@ module.exports = {
     filename: 'app.css',
     disable: false,
     allChunks: true
-  })
+  }),
+  new webpack.HotModuleReplacementPlugin(),
+  new webpack.NamedModulesPlugin()
   ]
 }
