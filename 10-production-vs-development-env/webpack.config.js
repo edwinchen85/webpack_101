@@ -10,6 +10,7 @@ var cssProd = ExtractTextPlugin.extract({
           loader: ['css-loader', 'sass-loader'],
           publicPath: '/dist'
         });
+var cssConfig = isProd ? cssProd : cssDev;
 
 module.exports = {
   entry: {
