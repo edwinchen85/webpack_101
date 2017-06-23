@@ -36,6 +36,7 @@ module.exports = {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
     stats: "errors-only",   // Replace verbose message with errors-only display
+    hot: true,      // enable hot module replacement
     open: true,     // open browser on first run
   },
   plugins: [
