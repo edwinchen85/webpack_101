@@ -5,6 +5,11 @@ var path = require('path');
 
 var isProd = process.env.NODE_ENV === 'production';   // true or false
 var cssDev = ['style-loader', 'css-loader', 'sass-loader'];
+var cssProd = ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          loader: ['css-loader', 'sass-loader'],
+          publicPath: '/dist'
+        });
 
 module.exports = {
   entry: {
