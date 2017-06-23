@@ -52,7 +52,7 @@ module.exports = {
   }),
   new ExtractTextPlugin({
     filename: 'app.css',
-    disable: false,
+    disable: !isProd,
     allChunks: true
   }),
   new webpack.HotModuleReplacementPlugin(),
