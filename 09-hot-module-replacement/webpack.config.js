@@ -5,8 +5,7 @@ var path = require('path');
 
 module.exports = {
   entry: {
-    app: './src/app.js',
-    contact: './src/contact.js'
+    app: './src/app.js'
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -16,11 +15,7 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: ['css-loader', 'sass-loader'],
-          publicPath: '/dist'
-        })
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.js$/,
