@@ -42,7 +42,7 @@ module.exports = {
     },
     hash: true,
     excludeChunks: ['contact'],   // exclude contact.js in index.html
-    template: './src/index.html',  // Load a custom template
+    template: './src/index.pug',  // Load a custom template
   }),
     new HtmlWebpackPlugin({
     title: 'Contact Page',
