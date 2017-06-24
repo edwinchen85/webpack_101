@@ -17,7 +17,8 @@ var bootstrapConfig = isProd ? bootstrapEntryPoints.prod : bootstrapEntryPoints.
 
 module.exports = {
   entry: {
-    app: './src/app.js'
+    app: './src/app.js',
+    bootstrap: bootstrapConfig
   },
   output: {
     path: path.resolve(__dirname, "dist"),
