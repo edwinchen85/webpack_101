@@ -47,7 +47,9 @@ module.exports = {
           // 'file-loader?name=[name].[ext]&outputPath=images/&publicPath=images/',
           'image-webpack-loader'
         ]
-      }
+      },
+      { test: /\.(woff2?|svg)$/, loader: 'url-loader?limit=10000' },
+      { test: /\.(ttf|eot)$/, loader: 'file-loader' }
     ]
   },
   devServer: {
