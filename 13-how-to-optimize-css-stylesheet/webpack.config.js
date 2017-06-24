@@ -1,21 +1,21 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var webpack = require('webpack');
-var path = require('path');
-var bootstrapEntryPoints =require('./webpack.bootstrap.config');
-var glob = require('glob');
-var PurifyCSSPlugin = require('purifycss-webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
+const path = require('path');
+const bootstrapEntryPoints =require('./webpack.bootstrap.config');
+const glob = require('glob');
+const PurifyCSSPlugin = require('purifycss-webpack');
 
-var isProd = process.env.NODE_ENV === 'production';   // true or false
-var cssDev = ['style-loader', 'css-loader', 'sass-loader'];
-var cssProd = ExtractTextPlugin.extract({
+const isProd = process.env.NODE_ENV === 'production';   // true or false
+const cssDev = ['style-loader', 'css-loader', 'sass-loader'];
+const cssProd = ExtractTextPlugin.extract({
           fallback: 'style-loader',
           loader: ['css-loader', 'sass-loader'],
           publicPath: '/dist'
         });
-var cssConfig = isProd ? cssProd : cssDev;
+const cssConfig = isProd ? cssProd : cssDev;
 
-var bootstrapConfig = isProd ? bootstrapEntryPoints.prod : bootstrapEntryPoints.dev;
+const bootstrapConfig = isProd ? bootstrapEntryPoints.prod : bootstrapEntryPoints.dev;
 
 module.exports = {
   entry: {
