@@ -52,7 +52,7 @@ module.exports = {
     new HtmlWebpackPlugin({
     title: 'Project Demo',
     hash: true,
-    template: './src/index.pug'
+    template: './src/index.html'
   }),
   new ExtractTextPlugin({
     filename: 'app.css',
