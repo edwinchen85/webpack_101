@@ -34,6 +34,10 @@ module.exports = {
       {
         test: /\.pug$/,
         use: 'pug-html-loader'
+      },
+      {
+        test: /\.png$/,
+        use: 'file-loader'
       }
     ]
   },
