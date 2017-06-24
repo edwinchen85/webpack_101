@@ -2,6 +2,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpack = require('webpack');
 var path = require('path');
+var bootstrapEntryPoints =require('./webpack.bootstrap.config');
 
 var isProd = process.env.NODE_ENV === 'production';   // true or false
 var cssDev = ['style-loader', 'css-loader', 'sass-loader'];
