@@ -13,6 +13,8 @@ var cssProd = ExtractTextPlugin.extract({
         });
 var cssConfig = isProd ? cssProd : cssDev;
 
+var bootstrapConfig = isProd ? bootstrapEntryPoints.prod : bootstrapEntryPoints.dev;
+
 module.exports = {
   entry: {
     app: './src/app.js'
