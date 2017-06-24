@@ -1,1 +1,14 @@
-body,html{height:100%;min-height:100%}body h1{width:700px;background-color:#fff;color:green}body h2{color:hotpink}
+body,html {
+  height: 100%;
+  min-height: 100%;
+}
+
+body h1 {
+  width: 700px;
+  background-color: #fff;
+  color: green;
+}
+
+body h2 {
+  color: hotpink;
+}
